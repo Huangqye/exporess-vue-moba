@@ -21,6 +21,10 @@ npm init -y
 ```
 npm i -g nodemon
 ```
+4. element
+```
+vue add element
+```
 
 
 
