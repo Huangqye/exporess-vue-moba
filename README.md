@@ -29,6 +29,10 @@ vue add element
 ```
 npm i axios
 ```
+6. 
+```
+npm i express@next mongoose cors
+```
 
 
 
