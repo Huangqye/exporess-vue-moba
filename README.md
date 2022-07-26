@@ -25,7 +25,13 @@ npm i -g nodemon
 ```
 vue add element
 ```
+5. axios 
+```
+npm i axios
+```
 
 
 
-###
+
+
+
