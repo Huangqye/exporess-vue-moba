@@ -33,6 +33,10 @@ npm i axios
 ```
 npm i express@next mongoose cors
 ```
+7.  单复数转换
+```
+npm i inflection
+```
 
 
 

@@ -36,22 +36,22 @@ export default {
   methods: {
     async save() {
       if (this.id) {
-        await this.$http.put(`/categories/${this.id}`, this.model);
+        await this.$http.put(`/rest/categories/${this.id}`, this.model);
       } else {
-        await this.$http.post("/categories", this.model);
+        await this.$http.post("/rest/categories", this.model);
       }
-      this.$router.push("/categories/list");
+      this.$router.push("/rest/categories/list");
       this.$message({
         type: "success",
         message: "保存成功",
       });
     },
     async fetch() {
-      const res = await this.$http.get(`/categories/${this.id}`);
+      const res = await this.$http.get(`/rest/categories/${this.id}`);
       this.model = res.data;
     },
     async fetchParents() {
-      const res = await this.$http.get(`/categories`);
+      const res = await this.$http.get(`/rest/categories`);
       this.parents = res.data;
     },
   },
