@@ -21,11 +21,11 @@ npm init -y
 ```
 npm i -g nodemon
 ```
-4. element
+4. 
 ```
 vue add element
 ```
-5. axios 
+5.  
 ```
 npm i axios
 ```
