@@ -38,6 +38,11 @@ npm i express@next mongoose cors
 npm i inflection
 ```
 
+8.  上传数据
+```
+npm i multer
+```
+
 
 
 

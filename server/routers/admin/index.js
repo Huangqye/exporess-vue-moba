@@ -31,9 +31,9 @@ module.exports = (app) => {
   // 获取列表
   router.get("/", async (req, res) => {
     // populate('parent') 拿到完整对象
-    const queryOptions = {}
-    if(req.Model.modelName === 'Category'){
-      queryOptions.populate = 'parent'
+    const queryOptions = {};
+    if (req.Model.modelName === "Category") {
+      queryOptions.populate = "parent";
     }
     const items = await req.Model.find().setOptions(queryOptions).limit(10);
     res.send(items);
@@ -53,6 +53,25 @@ module.exports = (app) => {
       // 请求对象挂载Model
       req.Model = require(`../../models/${modelName}`);
       next();
+    },
+    router
+  );
+
+
+
+//  图片上传
+  const multer = require("multer");
+  // __dirname根，绝对地址
+  const upload = multer({ dest: __dirname + "/../../uploads" });
+  // single 单文件夹
+  app.use(
+    "/admin/api/upload",
+    upload.single("file"),
+    async (req, res) => {
+      // 本来是没有这个file的，是通过中间件的所用
+      const file = req.file;
+      file.url = `http://localhost:3000/uploads/${file.filename}`
+      res.send(file);
     },
     router
   );

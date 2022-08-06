@@ -3,6 +3,11 @@
     <el-table :data="items">
       <el-table-column prop="_id" label="ID" />
       <el-table-column prop="name" label="物品名称" />
+      <el-table-column prop="name" label="图标">
+        <template slot-scope="scope">
+          <img :src="scope.row.icon" style="height:3rem"/>
+        </template>
+      </el-table-column>
       <el-table-column fixed="right" prop="name" label="操作">
         <template slot-scope="scope">
           <!-- 加'/'的目的是为了从跟目录开始 -->
@@ -48,7 +53,7 @@ export default {
           type: "success",
           message: "删除成功",
         });
-      this.fetch()
+        this.fetch();
       });
     },
   },
