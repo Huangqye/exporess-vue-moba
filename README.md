@@ -8,43 +8,56 @@
 
 ### 1、用了什么命令
 
-1. 创建vue项目
+1. 创建 vue 项目
+
 ```
 vue create xxx
 ```
+
 2. 初始化 node 项目
 
 ```
 npm init -y
 ```
+
 3. 后台进程
+
 ```
 npm i -g nodemon
 ```
-4. 
+
+4.
+
 ```
 vue add element
 ```
-5.  
+
+5.
+
 ```
 npm i axios
 ```
-6. 
+
+6.
+
 ```
 npm i express@next mongoose cors
 ```
+
 7.  单复数转换
+
 ```
 npm i inflection
 ```
 
 8.  上传数据
+
 ```
 npm i multer
 ```
 
+9.  编辑器
 
-
-
-
-
+```
+yarn add vue2-editor
+```
