@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const schema = new mongoose.Schema({
   name: { type: String },
-  // mongoose.SchemaType.ObjectId 里特殊的id ref是模型关联
+  // mongoose.SchemaType.ObjectId, 这只是一种模式类型,也就是关联id,ref是模型关联
   parent: { type: mongoose.SchemaTypes.ObjectId, ref: "Category" },
   
 });

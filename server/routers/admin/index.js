@@ -25,9 +25,10 @@ module.exports = (app) => {
     });
   });
 
-  // 获取
+  // 获取列表
   router.get("/categories", async (req, res) => {
-    const items = await Category.find().limit(10);
+    // populate('parent') 拿到完整对象 
+    const items = await Category.find().populate('parent').limit(10);
     res.send(items);
   });
 
