@@ -57,9 +57,9 @@ export default {
     },
     async save() {
       if (this.id) {
-        this.$http.put(`rest/articles/${this.id}`, this.model);
+        await this.$http.put(`rest/articles/${this.id}`, this.model);
       } else {
-        this.$http.post("rest/articles", this.model);
+        await this.$http.post("rest/articles", this.model);
       }
       this.$router.push("/articles/list");
       this.$message({
